@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@color/white">
+
+    <!-- Logo -->
+    <ImageView
+        android:id="@+id/logoImage"
+        android:layout_width="231dp"
+        android:layout_height="202dp"
+        android:layout_marginBottom="20dp"
+        android:contentDescription="Bienvenido a SenseMate, tu aliado para superar barreras sensoriales y facilitar la inclusión."
+        android:src="@drawable/logo" />
+
+    <!-- Texto descriptivo -->
+    <TextView
+        android:id="@+id/descriptionText"
+        android:layout_width="356dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:text="Bienvenido a SenseMate, tu aliado para superar barreras sensoriales y facilitar la inclusión."
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="16sp" />
+
+    <!-- Botón "Iniciar Sesión" -->
+    <Button
+        android:id="@+id/loginButton"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:text="Iniciar Sesión"
+        android:backgroundTint="@color/blue2"
+        android:textColor="@color/white"
+        android:elevation="5dp"
+        android:layout_marginBottom="15dp"/>
+
+    <!-- Botón "Registrarse" -->
+    <Button
+        android:id="@+id/registerButton"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:backgroundTint="@color/blue2"
+        android:elevation="5dp"
+        android:text="Register"
+        android:textColor="@color/white" />
+</LinearLayout>

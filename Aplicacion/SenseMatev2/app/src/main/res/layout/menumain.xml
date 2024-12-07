@@ -1,0 +1,158 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+
+    <!-- Card de Traductor de Señas -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/traductorCard"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="4dp"
+        android:layout_margin="16dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:weightSum="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:contentDescription="@string/traductor_icon"/>
+
+                <TextView
+                    android:id="@+id/traductorTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_weight="1"
+                    android:text="Traductor de Señas"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/traductorDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Convierte el lenguaje de señas en texto o audio en tiempo real. Facilita la comunicación entre personas con discapacidad auditiva y oyentes."
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/traductorButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="Comenzar"
+                android:backgroundTint="@color/blue"
+                android:focusable="true"
+                android:focusableInTouchMode="true"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Card de Indicador de camino -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/indicadorCard"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="4dp"
+        android:layout_margin="16dp"
+        app:layout_constraintTop_toBottomOf="@id/traductorCard"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:weightSum="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:contentDescription="@string/indicador_icon"/>
+
+                <TextView
+                    android:id="@+id/indicadorTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_weight="1"
+                    android:text="Indicador de camino"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/indicadorDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Guía de navegación accesible para personas con discapacidad visual, proporcionando indicaciones precisas y seguras."
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/indicadorButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="Comenzar"
+                android:backgroundTint="@color/blue"
+                android:focusable="true"
+                android:focusableInTouchMode="true"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Botón de Soporte Técnico -->
+    <Button
+        android:id="@+id/soporteButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Soporte Técnico/Ayuda"
+        android:textColor="@android:color/white"
+        android:backgroundTint="@color/blue"
+        android:layout_margin="16dp"
+        app:layout_constraintTop_toBottomOf="@id/indicadorCard"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:focusable="true"
+        android:focusableInTouchMode="true"/>
+
+    <!-- Barra de navegación inferior -->
+    <LinearLayout
+        android:id="@+id/navigationBar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:padding="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="?android:attr/windowBackground">
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

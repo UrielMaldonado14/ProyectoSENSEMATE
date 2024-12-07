@@ -1,0 +1,42 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#F9F9F9">
+
+    <!-- Menú desplegable de idioma -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Seleccione un Idioma"
+        android:textSize="16sp"
+        android:textColor="#444444"
+        android:layout_marginBottom="8dp" />
+
+    <Spinner
+        android:id="@+id/spinner_idioma"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@android:drawable/btn_dropdown"
+        android:padding="12dp"
+        android:popupBackground="#FFFFFF"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Menú desplegable de velocidad -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Seleccione una Velocidad"
+        android:textSize="16sp"
+        android:textColor="#444444"
+        android:layout_marginBottom="8dp" />
+
+    <Spinner
+        android:id="@+id/spinner_velocidad"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@android:drawable/btn_dropdown"
+        android:padding="12dp"
+        android:popupBackground="#FFFFFF" />
+</LinearLayout>

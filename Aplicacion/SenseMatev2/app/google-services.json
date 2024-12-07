@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "341375140497",
+    "project_id": "sensematev2-31d92",
+    "storage_bucket": "sensematev2-31d92.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:341375140497:android:aa54678101a6c4ff5bf530",
+        "android_client_info": {
+          "package_name": "com.example.sensematev2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "341375140497-d8mqfn2ek1ia8uro7du4gdmtrg61hjke.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyALQ1aGKWgzlVCSPWm2_jHVSTLQDkPbyVE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "341375140497-d8mqfn2ek1ia8uro7du4gdmtrg61hjke.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

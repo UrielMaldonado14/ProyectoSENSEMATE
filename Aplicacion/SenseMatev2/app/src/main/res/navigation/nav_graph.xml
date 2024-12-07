@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/firstLookFragment">
+
+    <!-- First Look -->
+    <fragment
+        android:id="@+id/firstLookFragment"
+        android:name="com.example.sensematev2.FirstLookFragment"
+        android:label="First Look"
+        tools:layout="@layout/firstlook">
+        <action
+            android:id="@+id/action_firstLookFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_firstLookFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
+    </fragment>
+
+    <!-- Login -->
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.sensematev2.LoginFragment"
+        android:label="Login"
+        tools:layout="@layout/login">
+        <action
+            android:id="@+id/action_loginFragment_to_menuMainFragment"
+            app:destination="@id/menuMainFragment"
+            app:popUpTo="@id/firstLookFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <!-- Register -->
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.example.sensematev2.RegisterFragment"
+        android:label="Register"
+        tools:layout="@layout/register">
+        <action
+            android:id="@+id/action_registerFragment_to_menuMainFragment"
+            app:destination="@id/menuMainFragment"
+            app:popUpTo="@id/firstLookFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/menuMainFragment"
+        android:name="com.example.sensematev2.MenuMainFragment"
+        android:label="fragment_menu_main"
+        tools:layout="@layout/menumain">
+        <action
+            android:id="@+id/action_menuMainFragment_to_signalTranslatorFragment"
+            app:destination="@id/signalTranslatorFragment" />
+        <action
+            android:id="@+id/action_menuMainFragment_to_trackIndicatorFragment"
+            app:destination="@id/trackIndicatorFragment" />
+        <action
+            android:id="@+id/action_menuMainFragment_to_itSupportFragment"
+            app:destination="@id/itSupportFragment" />
+    </fragment>
+
+
+    <!-- Options -->
+    <fragment
+        android:id="@+id/optionsFragment"
+        android:name="com.example.sensematev2.OptionsFragment"
+        android:label="Opciones"
+        tools:layout="@layout/options">
+        <action
+            android:id="@+id/action_optionsFragment_to_menuMainFragment"
+            app:destination="@id/menuMainFragment" />
+    </fragment>
+
+    <!-- Signal Translator -->
+    <fragment
+        android:id="@+id/signalTranslatorFragment"
+        android:name="com.example.sensematev2.SignalTranslatorFragment"
+        android:label="Signal Translator"
+        tools:layout="@layout/signalstraductor">
+        <action
+            android:id="@+id/action_signalTranslatorFragment_to_menuMainFragment"
+            app:destination="@id/menuMainFragment" />
+        <action
+            android:id="@+id/action_signalTranslatorFragment_to_loadingFragment"
+            app:destination="@id/loadingFragment" />
+    </fragment>
+
+    <!-- Track Indicator -->
+    <fragment
+        android:id="@+id/trackIndicatorFragment"
+        android:name="com.example.sensematev2.TrackIndicatorFragment"
+        android:label="Track Indicator"
+        tools:layout="@layout/trackindicator">
+        <action
+            android:id="@+id/action_trackIndicatorFragment_to_menuMainFragment"
+            app:destination="@id/menuMainFragment" />
+        <action
+            android:id="@+id/action_trackIndicatorFragment_to_routeBeginFragment"
+            app:destination="@id/routeBeginFragment" />
+        <action
+            android:id="@+id/action_trackIndicatorFragment_to_optionsFragment"
+            app:destination="@id/optionsFragment" />
+    </fragment>
+
+    <!-- IT Support -->
+    <fragment
+        android:id="@+id/itSupportFragment"
+        android:name="com.example.sensematev2.ITSupportFragment"
+        android:label="IT Support"
+        tools:layout="@layout/itsupport">
+        <action
+            android:id="@+id/action_itSupportFragment_to_menuMainFragment"
+            app:destination="@id/menuMainFragment" />
+    </fragment>
+
+    <!-- Route Begin -->
+    <fragment
+        android:id="@+id/routeBeginFragment"
+        android:name="com.example.sensematev2.RouteBeginFragment"
+        android:label="Route Begin"
+        tools:layout="@layout/routebegin">
+        <action
+            android:id="@+id/action_routeBeginFragment_to_menuMainFragment"
+            app:destination="@id/menuMainFragment" />
+    </fragment>
+
+    <!-- Translation History -->
+    <fragment
+        android:id="@+id/translationHistoryFragment"
+        android:name="com.example.sensematev2.TranslationHistoryFragment"
+        android:label="Translation History"
+        tools:layout="@layout/translationhistory">
+        <action
+            android:id="@+id/action_translationHistoryFragment_to_menuMainFragment"
+            app:destination="@id/menuMainFragment" />
+    </fragment>
+
+    <!-- Translation Editor -->
+    <fragment
+        android:id="@+id/translationEditorFragment"
+        android:name="com.example.sensematev2.TranslationEditorFragment"
+        android:label="Translation Editor"
+        tools:layout="@layout/translationeditor">
+        <action
+            android:id="@+id/action_translationEditorFragment_to_menuMainFragment"
+            app:destination="@id/menuMainFragment" />
+        <action
+            android:id="@+id/action_translationEditorFragment_to_signalTranslatorFragment"
+            app:destination="@id/signalTranslatorFragment" />
+    </fragment>
+
+    <!-- Translation Done -->
+    <fragment
+        android:id="@+id/translationDoneFragment"
+        android:name="com.example.sensematev2.TranslationDoneFragment"
+        android:label="Translation Done"
+        tools:layout="@layout/translationdone">
+        <action
+            android:id="@+id/action_translationDoneFragment_to_menuMainFragment"
+            app:destination="@id/menuMainFragment" />
+        <action
+            android:id="@+id/action_translationDoneFragment_to_translationEditorFragment"
+            app:destination="@id/translationEditorFragment" />
+        <action
+            android:id="@+id/action_translationDoneFragment_to_signalTranslatorFragment"
+            app:destination="@id/signalTranslatorFragment" />
+        <action
+            android:id="@+id/action_translationDoneFragment_to_translationHistoryFragment"
+            app:destination="@id/translationHistoryFragment" />
+    </fragment>
+
+    <!-- Close Session -->
+    <fragment
+        android:id="@+id/closeSessionFragment"
+        android:name="com.example.sensematev2.CloseSessionFragment"
+        android:label="Close Session"
+        tools:layout="@layout/closesession">
+        <action
+            android:id="@+id/action_closeSessionFragment_to_menuMainFragment"
+            app:destination="@id/menuMainFragment" />
+    </fragment>
+
+    <!-- Forms -->
+    <fragment
+        android:id="@+id/formsFragment"
+        android:name="com.example.sensematev2.FormsFragment"
+        android:label="Forms"
+        tools:layout="@layout/forms">
+        <action
+            android:id="@+id/action_formsFragment_to_menuMainFragment"
+            app:destination="@id/menuMainFragment" />
+    </fragment>
+
+    <!-- Loading -->
+    <fragment
+        android:id="@+id/loadingFragment"
+        android:name="com.example.sensematev2.LoadingFragment"
+        android:label="Loading"
+        tools:layout="@layout/loading">
+        <action
+            android:id="@+id/action_loadingFragment_to_menuMainFragment"
+            app:destination="@id/menuMainFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/viewOptionsFragment"
+        android:name="com.example.sensematev2.ViewOptionsFragment"
+        android:label="View Options"
+        tools:layout="@layout/viewoptions">
+        <action
+            android:id="@+id/action_viewOptionsFragment_to_menuMainFragment"
+            app:destination="@id/menuMainFragment" />
+    </fragment>
+
+</navigation>
+

@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">SenseMatev2</string>
+    <string name="traductor_icon">Icono Traductor</string>
+    <string name="indicador_icon">Icono Indicador de camino</string>
+    <string name="home">Inicio</string>
+    <string name="translate">Traductor</string>
+    <string name="directions">Direcciones</string>
+    <string name="back_button" />
+</resources>

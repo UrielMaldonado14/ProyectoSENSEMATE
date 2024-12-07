@@ -1,0 +1,178 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <ImageView
+        android:id="@+id/backButton"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/ic_arrow_back"
+        android:contentDescription="@string/back_button"
+        tools:ignore="MissingConstraints" />
+
+    <!-- Título -->
+    <!-- Título principal -->
+    <TextView
+        android:id="@+id/titulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Indicador de Camino"
+        android:textSize="24sp"
+        android:textColor="#333333"
+        android:fontFamily="sans-serif-medium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <!-- Etiqueta para la dirección de origen -->
+    <TextView
+        android:id="@+id/etiqueta_origen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dirección de Origen:"
+        android:textSize="16sp"
+        android:textColor="#666666"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/titulo" />
+
+    <!-- Campo para escribir la dirección de origen -->
+    <EditText
+        android:id="@+id/edit_origen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Escribe la dirección de origen"
+        android:padding="12dp"
+        android:textSize="16sp"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etiqueta_origen" />
+
+    <!-- Etiqueta para la dirección de destino -->
+    <TextView
+        android:id="@+id/etiqueta_destino"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dirección del Destino:"
+        android:textSize="16sp"
+        android:textColor="#666666"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edit_origen" />
+
+    <!-- Campo para escribir la dirección de destino -->
+    <EditText
+        android:id="@+id/edit_destino"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Escribe la dirección del destino"
+        android:padding="12dp"
+        android:textSize="16sp"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etiqueta_destino" />
+
+    <!-- Distancia al destino -->
+    <TextView
+        android:id="@+id/distancia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Distancia: "
+        android:textSize="16sp"
+        android:textColor="#444444"
+        android:layout_marginTop="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edit_destino" />
+
+    <!-- Tiempo estimado de llegada -->
+    <TextView
+        android:id="@+id/tiempo_estimado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tiempo estimado: "
+        android:textSize="16sp"
+        android:textColor="#444444"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/distancia" />
+
+
+    <!-- Mapa para visualizar la ruta -->
+
+    <org.osmdroid.views.MapView
+        android:id="@+id/mapa"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tiempo_estimado" />
+
+
+    <!-- Botones: Inicio, Finalizar y Configuración de Voz -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/mapa">
+
+        <!-- Botón Inicio -->
+        <Button
+            android:id="@+id/btn_inicio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:backgroundTint="#4CAF50"
+            android:fontFamily="sans-serif-medium"
+            android:padding="12dp"
+            android:text="Inicio"
+            android:textColor="#FFFFFF" />
+
+        <!-- Botón Configuración de Voz -->
+        <Button
+            android:id="@+id/btn_configuracion_voz"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:backgroundTint="#FF9800"
+            android:fontFamily="sans-serif-medium"
+            android:padding="12dp"
+            android:text="Config. Voz"
+            android:textColor="#FFFFFF" />
+
+        <!-- Botón Finalizar -->
+        <Button
+            android:id="@+id/btn_finalizar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#F44336"
+            android:fontFamily="sans-serif-medium"
+            android:padding="12dp"
+            android:text="Finalizar"
+            android:textColor="#FFFFFF" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
